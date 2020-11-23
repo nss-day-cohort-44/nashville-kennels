@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react"
+import { Location } from "./Location"
 import { LocationContext } from "./LocationProvider"
 
 export const LocationList = () => {
@@ -30,9 +31,7 @@ export const LocationList = () => {
   return (
     <div className="locations">
       {
-        locations.map(loc => {
-          return <section key={loc.id} className="location">{loc.name}</section>
-        })
+        locations.map(loc => <Location key={loc.id} location={loc} />)
       }
     </div>
   )
