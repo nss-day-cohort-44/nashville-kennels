@@ -8,6 +8,7 @@ import { CustomerProvider } from "./customer/CustomerProvider"
 import { EmployeeList } from "./employee/EmployeeList"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { EmployeeForm } from "./employee/EmployeeForm"
+import { EmployeeDetail } from "./employee/EmployeeDetail"
 
 export const ApplicationViews = (props) => {
   return (
@@ -42,6 +43,13 @@ export const ApplicationViews = (props) => {
             } />
             <Route path="/employees/create" render={
               props => <EmployeeForm {...props} />
+            } />
+            {/* New route for showing employee details */}
+            <Route path="/employees/:employeeId(\d+)" render={
+              props => {
+                console.log("Dynamic route for employee matched", props.match.params)
+                return <EmployeeDetail {...props} />
+              }
             } />
           </EmployeeProvider>
         </LocationProvider>
