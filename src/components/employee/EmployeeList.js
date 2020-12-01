@@ -15,12 +15,12 @@ export const EmployeeList = (props) => {
   )
 
   return (
-    <div className="employees">
+    <div>
       <h1>Employees</h1>
       <button onClick={() => props.history.push("/employees/create")}>
         Add Employee
         </button>
-      <article className="employeeList">
+      <article className="employees">
         {employees.map(employee => <Employee key={employee.id} employee={employee} />)}
       </article>
     </div>
