@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import Animal from "./Animal"
+import { Animal } from "./Animal"
 import "./Animal.css"
 
 export const AnimalList = ({ history }) => {

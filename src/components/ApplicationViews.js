@@ -10,7 +10,7 @@ import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { EmployeeForm } from "./employee/EmployeeForm"
 import { EmployeeDetail } from "./employee/EmployeeDetail"
 import { LocationDetail } from "./location/LocationDetail"
-import { AnimalDetails } from "./animal/AnimalDetail"
+import { AnimalDetail } from "./animal/AnimalDetail"
 
 export const ApplicationViews = (props) => {
   return (
@@ -40,7 +40,7 @@ export const ApplicationViews = (props) => {
               <AnimalList />
             </Route>
             <Route path="/animals/:animalId(\d+)" render={
-              props => <AnimalDetails {...props} />
+              props => <AnimalDetail {...props} />
             } />
           </CustomerProvider>
         </LocationProvider>
