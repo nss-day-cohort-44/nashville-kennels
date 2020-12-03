@@ -15,8 +15,16 @@ export const AnimalForm = (props) => {
         When changing a state object or array, always create a new one
         and change state instead of modifying current one
     */
+    console.log("********handleControlledInputChange Executes***********")
+    console.log(event.target)
+    console.log("current state variable animal", animal)
+
     const newAnimal = Object.assign({}, animal)
+    console.log("new object that's a copy of animal state variable", newAnimal)
+    
     newAnimal[event.target.name] = event.target.value
+    console.log("newAnimal after modification", newAnimal)
+    
     setAnimal(newAnimal)
   }
 
